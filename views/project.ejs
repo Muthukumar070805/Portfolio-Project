@@ -1,0 +1,19 @@
+<%- include('header'); -%>
+<section class="project">
+      <h1 data-aos="fade-right" data-aos-duration="900">Projects</h1>
+      <% projects.forEach((project)=> { %>
+      <article class="project-card">
+        <div>
+          <h2 data-aos="fade-right" data-aos-duration="900"><%= project.name %></h2>
+          <p>
+            <%= project.description %>
+          </p>
+        </div>
+        <img 
+          src="<%= project.image.replace(/\\/g, '/') %>"
+          alt="" data-aos="fade-left" data-aos-duration="900"
+        />
+      </article>
+      <% }); %>
+    </section>
+  <%- include('footer'); -%>

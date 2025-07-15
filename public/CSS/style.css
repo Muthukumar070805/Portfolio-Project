@@ -1,0 +1,560 @@
+:root {
+  --primary: #fff;
+  --secondary: #00000000;
+  --color1: rgb(238, 163, 2);
+  --color2: rgb(255, 59, 37);
+  --color3: rgb(128, 216, 218);
+  --color4: rgba(0, 0, 0, 0.75);
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+}
+@font-face {
+  font-family: "Avenir-Light";
+  src: url("../fonts/AvenirLTStd-Light.otf");
+}
+@font-face {
+  font-family: "Questrial";
+  src: url("../fonts/Questrial-Regular.ttf");
+}
+@font-face {
+  font-family: "WorkSans";
+  src: url("../fonts/WorkSans-Regular.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: black;
+  text-decoration: none;
+  list-style: none;
+}
+body {
+  font-family: "WorkSans";
+  background-color: var(--secondary);
+}
+.navbar {
+  padding: var(--spacing-sm);
+  margin: var(--spacing-lg) 0;
+  width: 100%;
+  max-width: 1600px;
+  margin-inline: auto;
+}
+.navdiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-evenly;
+  justify-self: center;
+  margin-left: var(--spacing-sm);
+}
+.logo path {
+  fill: var(--color1);
+}
+.logo path:hover {
+  filter: brightness(1.2);
+  transition: ease-in-out 0.3s;
+}
+.logo svg {
+  justify-self: center;
+  margin-right: var(--spacing-sm);
+  margin-left: var(--spacing-lg);
+  cursor: pointer;
+}
+
+/* Name */
+.logo h2 {
+  font-family: "WorkSans";
+  font-weight: bold;
+  font-size: 4rem;
+  cursor: pointer;
+}
+
+/* Role */
+.logo p {
+  color: var(--color4);
+  font-family: "Avenir-Light";
+  font-size: 1.8rem;
+  font-weight: 100;
+  position: relative;
+  top: 10px;
+  left: var(--spacing-md);
+}
+
+/* navbar */
+.navlinks li {
+  list-style: none;
+  display: inline-block;
+  text-align: center;
+  margin-right: var(--spacing-sm);
+}
+.navlinks li:not(:last-child) {
+  border-right: 1px solid rgba(0, 0, 0, 0.3);
+}
+.navlinks li a {
+  color: var(--color4);
+  font-family: "Avenir-Light";
+  font-size: 1.5rem;
+  margin-right: var(--spacing-lg);
+  cursor: pointer;
+}
+.navlinks li a:hover {
+  color: rgba(238, 163, 2, 0.5);
+  transition: 0.3s ease;
+}
+
+.line {
+  margin-top: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+hr {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* footer */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(1rem, 4vw, var(--spacing-lg));
+  padding: clamp(1rem, 2vw, var(--spacing-md));
+  max-width: min(95%, 1440px);
+  margin: 0 auto;
+  min-height: 10vh;
+  margin-bottom: clamp(1rem, 2vw, var(--spacing-md));
+  flex-wrap: wrap;
+}
+.footer__social{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 10px 5px 0px 5px;
+}
+.footer__social li {
+  width: 42px;
+  height: 42px;
+  background-color: var(--color4);
+  border-radius: 100%;
+}
+.footer__social li:hover {
+  cursor: pointer;
+  transform: translateY(-0.2rem) !important;
+  transition: 0.3s !important;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer__social li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+  height: 45%;
+  object-fit: contain;
+}
+
+span {
+  font-family: "WorkSans";
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+footer a,
+p {
+  font-family: "WorkSans";
+}
+footer .copyright,
+p,
+a {
+  font-family: "Avenir-Light";
+  font-size: 1.4rem;
+}
+.email,
+.phone {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.active{
+  color: var(--color1) !important;
+  font-weight: bolder !important;
+  font-size: 1.8em !important;
+}
+
+/* screens */
+@media (max-width: 1024px) {
+  /* Responsive for tablets and small laptops */
+  .navbar {
+    padding: 1rem;
+    margin: 1rem 0;
+    max-width: 100vw;
+  }
+  .navlinks li a {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+  }
+  .profile,
+  .project-card,
+  .resume-card,
+  .resume-article,
+  .resume-skillcard,
+  .contact-container {
+    max-width: 98vw;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  .profile-photo img,
+  .project-card img,
+  .resume-photo img {
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+  }
+  .footer {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    max-width: 100vw;
+  }
+  .footer__social {
+    justify-content: center;
+    gap: 0.5rem;
+  }
+}
+
+/* Responsive for mobile devices */
+@media (max-width: 800px) {
+  .navbar,
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    max-width: 100vw;
+  }
+  .navdiv {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+  }
+  .logo {
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .logo h2 {
+    font-size: 2rem;
+    margin: 0.5rem 0;
+  }
+  .logo p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    left: 0;
+    top: 0;
+  }
+  .navlinks {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  .navlinks li {
+    margin: 0.5rem 0;
+    border: none;
+    font-size: 1rem;
+  }
+  .navlinks li a {
+    font-size: 1.1rem;
+    margin: 0;
+  }
+  .profile,
+  .project-card,
+  .resume-card,
+  .resume-article,
+  .resume-skillcard,
+  .contact-container {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.5rem !important;
+    padding: 1rem !important;
+    max-width: 100vw !important;
+    margin: 0 auto !important;
+    min-height: auto !important;
+  }
+  .profile-photo img,
+  .project-card img,
+  .resume-photo img {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    margin: 0 auto;
+  }
+  .profile-text h1,
+  .project h1,
+  .headerdiv h1 {
+    font-size: 2rem;
+    padding: 1rem 0.5rem;
+    max-width: 100vw;
+  }
+  .profile-buttons ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  .profile-buttons button {
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .resume-ul ul {
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 0;
+    margin: 0;
+  }
+  .resume-ul li {
+    font-size: 1rem;
+    padding: 0.5rem;
+    top: 0;
+  }
+  .resume-period {
+    font-size: 1rem;
+    top: 0;
+    right: 0;
+    position: static;
+  }
+  .contact-details,
+  .contact-form {
+    flex-basis: 100%;
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+  .contact-details h1 {
+    font-size: 1.5rem;
+  }
+  .contact-details h2 {
+    font-size: 1.1rem;
+  }
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea,
+  .contact-form button {
+    width: 100%;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 600px) {
+  body {
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navbar {
+    flex-direction: column;
+    padding: 0.5rem;
+    margin: 0;
+    max-width: 100vw;
+  }
+  .navdiv {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .logo {
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .logo h2 {
+    font-size: 2rem;
+    margin: 0.5rem 0;
+  }
+  .logo p {
+    font-size: 1rem;
+    left: 0;
+    top: 0;
+    margin-bottom: 0.5rem;
+  }
+  .navlinks {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  .navlinks li {
+    margin: 0.5rem 0;
+    border: none;
+    font-size: 1rem;
+  }
+  .navlinks li a {
+    font-size: 1.1rem;
+    margin: 0;
+  }
+
+  .profile {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    min-height: auto;
+    max-width: 100vw;
+  }
+  .profile-photo img {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 1rem;
+  }
+  .profile-text h1 {
+    font-size: 2.2rem;
+  }
+  .profile-text h3 {
+    font-size: 1.2rem;
+  }
+  .profile-text p {
+    font-size: 1rem;
+  }
+  .profile-buttons ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  .profile-buttons button {
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    min-height: auto;
+    text-align: center;
+    max-width: 100vw;
+  }
+  .footer__social {
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+  }
+  .footer__social li {
+    width: 32px;
+    height: 32px;
+  }
+  .footer__social img {
+    width: 24px;
+    height: 24px;
+  }
+  .Phone, .email {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .copyright {
+    font-size: 0.9rem;
+    margin-top: 1rem;
+  }
+
+  .project h1,
+  .headerdiv h1 {
+    font-size: 2rem;
+    padding: 1rem 0.5rem;
+    max-width: 100vw;
+  }
+  .project-card,
+  .resume-card,
+  .resume-article,
+  .resume-skillcard {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.5rem !important;
+    padding: 1rem !important;
+    max-width: 100vw !important;
+    margin: 0 auto !important;
+    min-height: auto !important;
+  }
+  .project-card img,
+  .resume-photo img {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    margin: 0 auto;
+  }
+  .project-card h2,
+  .resume-card h2,
+  .resume-skillcard h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    top: 0;
+    left: 0;
+    position: static;
+  }
+  .resume-ul ul {
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 0;
+    margin: 0;
+  }
+  .resume-ul li {
+    font-size: 1rem;
+    padding: 0.5rem;
+    top: 0;
+  }
+  .resume-period {
+    font-size: 1rem;
+    top: 0;
+    right: 0;
+    position: static;
+  }
+  .line {
+    width: 100vw;
+    margin: 1rem 0;
+  }
+  hr {
+    width: 100vw;
+  }
+  .contact-container {
+    flex-direction: column;
+    padding: 1rem;
+    max-width: 100vw;
+  }
+  .contact-details,
+  .contact-form {
+    flex-basis: 100%;
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+  .contact-details h1 {
+    font-size: 1.5rem;
+  }
+  .contact-details h2 {
+    font-size: 1.1rem;
+  }
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea,
+  .contact-form button {
+    width: 100%;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+}

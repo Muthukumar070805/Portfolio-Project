@@ -1,0 +1,35 @@
+@import url(style.css);
+.project h1 {
+  display: flex;
+  align-items: flex-start;
+  max-width: min(95%, 1440px);
+  gap: clamp(1rem, 4vw, var(--spacing-sm));
+  padding: clamp(2rem, 3vw, var(--spacing-sm));
+  margin: 0 auto;
+  font-family: "WorkSans";
+  font-size: 4rem;
+}
+.project-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(1rem, 4vw, var(--spacing-lg));
+  padding: clamp(1rem, 3vw, var(--spacing-md));
+  max-width: min(95%, 1440px);
+  margin: 0 auto;
+  min-height: 50vh;
+}
+.project-card h2 {
+    display: flex;
+    position: relative;
+    bottom: var(--spacing-lg);
+    font-family: "WorkSans";
+    font-size: 2.5rem;
+    
+}
+
+.project-card img{
+  width: 414px !important;
+  height: 414px !important;
+  border-radius: var(--spacing-sm);
+}

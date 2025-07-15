@@ -1,0 +1,73 @@
+@import url(style.css);
+.headerdiv h1 {
+  display: flex;
+  align-items: flex-start;
+  max-width: min(95%, 1440px);
+  gap: clamp(1rem, 4vw, var(--spacing-sm));
+  padding: clamp(2rem, 3vw, var(--spacing-sm));
+  margin: 0 auto;
+  font-family: "WorkSans";
+  font-size: 4rem;
+}
+.resume-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(1rem, 4vw, var(--spacing-lg));
+  padding: clamp(1rem, 3vw, var(--spacing-md));
+  max-width: min(95%, 1440px);
+  margin: 0 auto;
+  min-height: 20vh;
+}
+.resume-article {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: clamp(1rem, 3vw, var(--spacing-md));
+  margin: 0 auto;
+  min-height: 20vh;
+}
+.resume-article div {
+  max-width: 600px;
+}
+.resume-card h2,.resume-skillcard h2 {
+  display: flex;
+  align-self: flex-start;
+  position: relative;
+  top: var(--spacing-md);
+  font-family: "WorkSans";
+  font-size: 2rem;
+  font-weight: bolder;
+  max-width: 700px;
+}
+.resume-card div span {
+  font-family: "WorkSans";
+  font-size: 1.8rem;
+}
+.resume-period {
+  font-family: "Avenir-Light";
+  font-size: 1.5rem;
+  font-weight: lighter;
+  display: flex;
+  position: relative;
+  top: 1rem;
+  right: 1rem;
+  align-self: flex-start;
+}
+.resume-skillcard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: clamp(1rem, 3vw, var(--spacing-md));
+  max-width: min(95%, 1440px);
+  margin: 0 auto;
+}
+.resume-ul li {
+  position: relative;
+  top: 1rem;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+.resume-ul ul li{
+  list-style: disc !important; 
+}

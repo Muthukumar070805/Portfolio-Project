@@ -1,0 +1,54 @@
+<%- include('header'); -%>
+      <header class="headerdiv" data-aos="fade-right" data-aos-duration="900">
+        <h1>Resume</h1>
+      </header>
+    <section class="resume">
+      <section class="resume-card">
+        <h2 data-aos="fade-right" data-aos-duration="900">Work <br> Experience</h2>
+        <section>
+        <% works.forEach((work)=> { %>
+        <article class="resume-article">
+            <span class="resume-period"><%= work.period %></span>
+          <div>
+            <span><%= work.role %></span><br>
+            <span><%= work.company %></span>
+            <p><%= work.description %></p>
+          </div>
+        </article>
+         <% }); %>
+
+      </section>
+      </section>
+      <div class="line">
+        <hr />
+      </div>
+        <section class="resume-card">
+          <h2 data-aos="fade-right" data-aos-duration="900">Education</h2>
+          <section>
+              <% edu.forEach((ed)=> { %>
+          <article class="resume-article">
+            <span class="resume-period"><%= ed.period %></span>
+            <div>
+              <span><%= ed.degree %></span><br>
+            <span><%= ed.institution %></span>
+            </div>
+          </article>
+          <% }); %>
+         
+        </section>
+        </section>
+      <div class="line">
+        <hr />
+      </div>
+        <section class="resume-skillcard">
+          <h2 data-aos="fade-right" data-aos-duration="900">Skills & Expertise</h2>
+          <article class="resume-ul">
+            <ul>
+               <% skills.forEach((skill)=> { %>
+              <li><%= skill.name %></li>
+              <% }); %>
+            </ul>
+          </article>
+        </section>
+    </section>
+<%- include('footer'); -%>

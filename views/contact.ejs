@@ -1,0 +1,21 @@
+<%- include('header'); -%>
+<section class="contact-container">
+      <section class="contact-details">
+        <h1 data-aos="fade-right" data-aos-duration="900">Contact</h1>
+        <p>Looking forward to hearing from you</p>
+        <h2 data-aos="fade-right" data-aos-duration="900">Phone</h2>
+        <p><%= users[0].phone %></p>
+        <h2 data-aos="fade-right" data-aos-duration="900">Email</h2>
+        <p><%= users[0].email %></p>
+      </section>
+      <form action="contact" method="POST" class="contact-form" data-aos="fade-left" data-aos-duration="900">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" />
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" />
+        <label for="message">Message</label>
+        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+        <button type="submit" value="Send">submit</button>
+      </form>
+    </section>
+<%- include('footer'); -%>

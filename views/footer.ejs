@@ -1,0 +1,49 @@
+    <div class="line">
+      <hr />
+    </div>
+    <section class="footer">
+      <div class="Phone">
+        <span>Phone</span>
+        <p><%= users[0].phone %></p>
+      </div>
+      <div class="email">
+        <span>Email</span>
+        <a href=""><%= users[0].email %></a>
+      </div>
+      <div>
+        <span>Follow Me</span>
+        <ul class="footer__social">
+          <li class="flex-center">
+            <a href="<%= users[0].facebook %>" target="_blank"><img src="/assets/pngfind.com-github-logo-png-1766942.svg" alt="facebook" height="34px" width="34px"/></a>
+          </li>
+          <li class="flex-center">
+            <a href="<%= users[0].instagram %>" target="_blank"><img src="/assets/instagram.svg" alt="instagram" /></a>
+          </li>
+          <li class="flex-center">
+            <a href="<%= users[0].twitter %>" target="_blank"><img src="/assets/twitter.svg" alt="twitter" /></a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <p class="copyright">
+          Design inspired by <br />
+          Nicol Rider (<a href="https://admin79708.wixsite.com/nicola" target="_blank">Wix Studio</a>).
+        </p>
+      </div>
+    </section>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+      AOS.init({
+        disable: false,
+        startEvent: "DOMContentLoaded",
+        initClassName: "aos-init",
+        animatedClassName: "aos-animate",
+        useClassNames: false,
+        disableMutationObserver: false,
+        debounceDelay: 50,
+        throttleDelay: 99,
+      });
+    </script>
+  </body>
+</html>

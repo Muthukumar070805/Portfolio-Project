@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <% if(path === 'main') { %>
+    <link rel="stylesheet" href="/CSS/landing.css" />
+    <% } %>
+    <% if(path === 'contact') { %>
+    <link rel="stylesheet" href="/CSS/contact.css" />
+    <% } %>
+    <% if(path === 'project') { %>
+    <link rel="stylesheet" href="/CSS/project.css" />
+    <% } %>
+    <% if(path === 'resume') { %>
+    <link rel="stylesheet" href="/CSS/resume.css" />
+    <% } %>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <title><%= title %></title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navdiv">
+        <div class="logo" data-aos="fade-right" data-aos-duration="600">
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 50 50"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M25,0 A25,25 0 1,1 24.999,0 Z" />
+          </svg>
+          <a href="/"><h2><%= users[0].name %></h2></a> 
+          <p><%= users[0].role %></p>
+        </div> 
+        <ul type="none" class="navlinks" w>
+          <li><a class="<% if(path === 'resume') { %> active <% } %>" href="resume">Resume</a></li>
+          <li><a class="<% if(path === 'project') { %> active <% } %>" href="project">Project</a></li>
+          <li class="vline"><a class="<% if(path === 'contact') { %> active <% } %>" href="contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
