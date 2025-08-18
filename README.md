@@ -24,7 +24,7 @@ It serves as a **practical demonstration of my full-stack capabilities** — fro
 
 * 📄 **Dynamic Resume Data** – Content such as experience, skills, and projects are fetched from MySQL.
 * 📧 **Nodemailer Contact Form** – Visitors can send messages directly to my inbox via a secure backend route.
-* 📱 **Responsive Design** – Optimized for all screen sizes.
+* 📱 **Responsive Design** – Optimized for Mobile screen sizes.
 * ⚙️ **Backend Integration** – RESTful APIs built with Express.js.
 * ☁️ **Cloud Deployment** – Website hosted on **Render**, Database on **Clever-Cloud**.
 
