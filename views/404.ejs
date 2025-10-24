@@ -1,231 +1,24 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title><%= title || '404 — Not Found' %></title>
-  <!-- Link your provided stylesheet -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 - Page Not Found</title>
   <link rel="stylesheet" href="/styles/style.css" />
-  <style>
-    /* small local styles that complement your style.css (keeps variables) */
-    .error-page {
-      min-height: 75vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: clamp(2rem, 6vw, 6rem);
-      gap: 3rem;
-      text-align: center;
-      flex-direction: column;
-    }
-
-    .error-card {
-      max-width: 1100px;
-      width: 100%;
-      display: grid;
-      grid-template-columns: 1fr 420px;
-      gap: clamp(1rem, 4vw, 3rem);
-      align-items: center;
-      background: linear-gradient(180deg, var(--secondary) 0%, rgba(0,0,0,0.035) 100%);
-      padding: clamp(1rem, 3vw, 2.5rem);
-      border-radius: 16px;
-      box-shadow: 0 12px 40px rgba(0,0,0,0.12);
-    }
-
-    /* stack on smaller screens */
-    @media (max-width: 900px) {
-      .error-card { grid-template-columns: 1fr; padding: 1.5rem; }
-    }
-
-    .error-left {
-      text-align: left;
-    }
-
-    .big-404 {
-      font-family: "Questrial", "WorkSans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      font-size: clamp(4rem, 12vw, 8rem);
-      line-height: 0.9;
-      margin-bottom: 0.25rem;
-      font-weight: 700;
-      /* gradient text using your color vars */
-      background: linear-gradient(90deg, var(--color1), var(--color2), var(--color3));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      -webkit-text-fill-color: transparent;
-      letter-spacing: -6px;
-    }
-
-    .error-title {
-      font-size: clamp(1.6rem, 2.5vw, 2.2rem);
-      font-weight: 700;
-      color: var(--color4);
-      margin-bottom: 0.5rem;
-    }
-
-    .error-desc {
-      color: rgba(0,0,0,0.65);
-      font-size: 1.1rem;
-      margin-bottom: 1rem;
-      font-family: "Avenir-Light", "WorkSans";
-    }
-
-    .error-meta {
-      color: rgba(0,0,0,0.45);
-      font-size: 0.95rem;
-    }
-
-    .cta-row {
-      margin-top: clamp(1rem, 3vw, 1.5rem);
-      display: flex;
-      gap: 1rem;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 0.7rem 1.2rem;
-      border-radius: 10px;
-      font-weight: 700;
-      font-size: 1rem;
-      cursor: pointer;
-      border: none;
-      text-decoration: none;
-    }
-
-    .btn-primary {
-      background: linear-gradient(90deg, var(--color1), var(--color2));
-      color: white;
-      box-shadow: 0 8px 18px rgba(0,0,0,0.12);
-    }
-
-    .btn-ghost {
-      background: transparent;
-      color: var(--color4);
-      border: 1px solid rgba(0,0,0,0.08);
-    }
-
-    /* right column illustration */
-    .art {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 220px;
-    }
-
-    .art svg {
-      width: 100%;
-      max-width: 360px;
-      height: auto;
-      filter: drop-shadow(0 18px 30px rgba(0,0,0,0.12));
-    }
-
-    .small-note {
-      margin-top: 0.75rem;
-      font-size: 0.9rem;
-      color: rgba(0,0,0,0.45);
-    }
-
-  </style>
 </head>
 <body>
-  <!-- optional navbar using your classes (keeps site header consistent) -->
-  <header class="navbar">
-    <div class="navdiv">
-      <div class="logo" role="img" aria-label="Site logo">
-        <!-- small inline svg logo (uses your color1) -->
-        <svg width="48" height="48" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect x="1.5" y="1.5" width="21" height="21" rx="6" fill="var(--color1)"></rect>
-          <path d="M6 12 L10 8 L14 16 L18 10" stroke="#fff" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <div>
-          <h2><a href="<%= homeUrl || '/' %>" style="color:var(--color4); text-decoration:none;">YourSite</a></h2>
-          <p>Thoughtful engineering — clever interfaces</p>
-        </div>
-      </div>
-
-      <nav>
-        <ul class="navlinks" aria-label="Primary">
-          <li><a href="<%= homeUrl || '/' %>">Home</a></li>
-          <li><a href="/projects">Projects</a></li>
-          <li><a href="/contact">Contact</a></li>
-        </ul>
-      </nav>
+  <main class="flex-center" style="flex-direction: column; min-height: 100vh; text-align: center;">
+    <h1 class="logo" style="flex-direction: column;">
+      <span style="font-size: 8rem; color: var(--color1);">404</span>
+      <p style="font-size: 2rem; color: var(--color4);">Page Not Found</p>
+    </h1>
+    <p style="font-family: 'Avenir-Light'; color: var(--color4); font-size: 1.2rem;">
+      The page you’re looking for doesn’t exist or has been moved.
+    </p>
+    <div class="flex-center" style="margin-top: 2rem; gap: 1rem;">
+      <a href="/" class="active">Go Home</a>
+      <a href="javascript:history.back()">Go Back</a>
     </div>
-  </header>
-
-  <main class="error-page" role="main" aria-labelledby="page-title">
-    <section class="error-card" role="region" aria-label="404 error information">
-      <div class="error-left">
-        <div class="big-404" aria-hidden="true">404</div>
-
-        <h1 id="page-title" class="error-title">Page Not Found</h1>
-
-        <p class="error-desc">
-          Looks like the page you were trying to reach doesn't exist or has moved.
-        </p>
-
-        <% if (typeof attemptedUrl !== 'undefined' && attemptedUrl) { %>
-          <p class="error-meta">Tried: <strong><%= attemptedUrl %></strong></p>
-        <% } %>
-
-        <div class="cta-row" role="group" aria-label="Actions for 404">
-          <a class="btn btn-primary" href="<%= homeUrl || '/' %>">Go to Home</a>
-          <button class="btn btn-ghost" onclick="window.history.length > 1 ? window.history.back() : window.location.href = '<%= homeUrl || '/' %>'">
-            Go Back
-          </button>
-          <a class="btn" href="/report" style="background:transparent;color:rgba(0,0,0,0.55);font-weight:600;">Report issue</a>
-        </div>
-
-        <p class="small-note">If you believe this is an error, please <a href="/contact">contact us</a>.</p>
-      </div>
-
-      <div class="art" aria-hidden="true">
-        <!-- friendly illustrative SVG using your color palette -->
-        <svg viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration">
-          <defs>
-            <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
-              <stop offset="0" stop-color="var(--color3)" />
-              <stop offset="1" stop-color="var(--color1)" />
-            </linearGradient>
-          </defs>
-
-          <rect x="40" y="40" rx="24" ry="24" width="560" height="400" fill="rgba(0,0,0,0.03)"/>
-          <g transform="translate(80,84)">
-            <circle cx="220" cy="120" r="96" fill="url(#g1)"></circle>
-            <path d="M80 260 C140 220, 300 220, 360 260" fill="none" stroke="var(--color2)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
-            <rect x="280" y="30" width="120" height="110" rx="14" fill="rgba(255,255,255,0.9)"></rect>
-            <rect x="48" y="42" width="130" height="82" rx="12" fill="rgba(255,255,255,0.85)"></rect>
-            <path d="M200 70 L240 70 L220 108 Z" fill="rgba(255,255,255,0.9)"></path>
-          </g>
-        </svg>
-      </div>
-    </section>
   </main>
-
-  <footer class="footer" role="contentinfo" aria-label="Footer">
-    <div>
-      <span>Built for clarity.</span>
-      <p class="copyright">© <%= new Date().getFullYear() %> YourCompany</p>
-    </div>
-    <ul class="footer__social" aria-hidden="false">
-      <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><img src="/icons/twitter.svg" alt="" /></a></li>
-      <li><a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><img src="/icons/github.svg" alt="" /></a></li>
-      <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><img src="/icons/linkedin.svg" alt="" /></a></li>
-    </ul>
-  </footer>
-
-  <script>
-    // small defensive script: if an attemptedUrl variable wasn't passed server-side, attempt to capture it client-side
-    (function(){
-      try {
-        // if server didn't pass attemptedUrl, expose it for diagnostics in console
-        <% if (!attemptedUrl) { %>
-          console.debug('Client URL at 404:', location.pathname + location.search);
-        <% } %>
-      } catch(e) { /* ignore */ }
-    })();
-  </script>
 </body>
 </html>
